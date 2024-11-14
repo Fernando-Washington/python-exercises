@@ -11,7 +11,7 @@ while True:
     resultado = valor1 + valor2
     print(f"O resultado da soma é: {resultado}")
     
-    sair = input("Deseja sair? (s/n) \n")
+    sair = input("Deseja sair? (s/n) \n").lower()
     if sair == "s":
         print("Obrigado por usar a calculadora!")
         break

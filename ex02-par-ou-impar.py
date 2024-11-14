@@ -11,7 +11,7 @@ while True:
     else:
         print(f"O numero {num} é impar")
     
-    sair = input("Deseja sair? (s/n) \n")
+    sair = input("Deseja sair? (s/n) \n").lower()
     if sair == "s":
         print("Obrigado por usar o verificador de numeros pares e impares!")
         break
