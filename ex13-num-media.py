@@ -5,17 +5,22 @@
 def media():
     print("Bem vindo ao programa média de notas")
     notas = []
-    
+    print("Digite as notas uma por vez e digite 'pronto' para realizar o cálculo: ")
     while True:
-        nota = input("Digite uma nota ou digite 'pronto' para sair: ").lower()
-        if nota == "pronto":
+        lista_nota = input("Insira as notas: \n").lower()
+        if lista_nota == "pronto":
+            if notas: # 1 ou + elemento = True, 0 elementos = False
+                media = sum(notas) / len(notas)
+                print(f"Suas notas são: {lista_nota}")
+                notas_maiores = [nota for nota in notas if nota > media] 
             print(f"Notas maiores que a média: {notas_maiores}")
             break
         else:
-            notas.append(float(nota))
-            print(f"Suas notas são: {notas}")
-        if notas:
-            media = sum(notas) / len(notas)
-            notas_maiores = [nota for nota in notas if nota > media] 
+            notas.append(float(lista_nota))
+            
+        
 media()
+
+# sum - soma todos os elementos de uma lista
+# len - retorna o tamanho de uma lista
     
