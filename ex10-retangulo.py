@@ -9,7 +9,7 @@ def retangulo():
     while x:
         base = float(input("Digite a base do retângulo: \n"))
         altura = float(input("Digite a altura do retângulo: \n"))
-        area =  base * altura
+        area =  (base * altura) / 2
 
         print(f"A área do retângulo é: {area}m²")
         
